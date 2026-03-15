@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const inter = Inter({
@@ -52,6 +53,10 @@ export default function RootLayout({
       </head>
       <body className="bg-[#0a0a0a] text-zinc-300 antialiased font-sans">
         {children}
+        <Script
+          src="https://avatar.nomineelife.com/echoai-widget.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

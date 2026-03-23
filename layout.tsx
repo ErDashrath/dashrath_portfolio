@@ -54,7 +54,7 @@ export default function RootLayout({
       <body className="bg-[#0a0a0a] text-zinc-300 antialiased font-sans">
         {children}
         <Script
-          src="https://avatar.nomineelife.com/echoai-widget.js?v=1"
+          src="https://avatar.nomineelife.com/echoai-widget.js?v=2"
           data-token="ew_gwALhSedvrrF7pMpqMiP0g"
           data-profile="6bc7309d-fd62-40b3-990c-69efe4b246da"
           strategy="afterInteractive"

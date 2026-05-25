@@ -55,8 +55,8 @@ export default function RootLayout({
         {children}
         <Script
           src="https://avatar.nomineelife.com/echoai-widget.js?v=2"
-          data-token="ew_1hBRXqNCFFKZG5IFZwYoag"
-          data-profile="b804653c-cf41-493a-b425-2511c3bec3b7"
+          data-token="ew_pvguj07ymNOAQsXBjF69uw"
+          data-profile="e74be6be-7df0-47f8-94f9-b4e4594bc5da"
           strategy="afterInteractive"
         />
       </body>

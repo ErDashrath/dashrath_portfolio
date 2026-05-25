@@ -9,8 +9,8 @@ type View = 'domain' | 'tech';
 interface Project {
   name: string;
   desc: string;
-  github: string;
-  live: string | null;
+  github?: string | null;
+  live?: string | null;
 }
 
 const byDomain: Record<string, Project[]> = {
@@ -21,6 +21,7 @@ const byDomain: Record<string, Project[]> = {
     { name: 'Health Buddy', desc: 'Medical RAG assistant (Phi-3 + ChromaDB)', github: 'https://github.com/ErDashrath/Healthbuddy', live: 'https://healthbuddy-kappa.vercel.app/' },
   ],
   'Voice & Audio AI': [
+    { name: 'TeleBot CPaaS Caller', desc: 'AI voice-calling platform (FastAPI + WebSockets + STT/LLM/TTS + Twilio/Telnyx)', github: null, live: null },
     { name: 'SatyaSwara', desc: 'AI voice scam detection API (<200ms)', github: 'https://github.com/ErDashrath/SatyaSwara', live: null },
     { name: 'Multilingual Voice Detection', desc: 'Deepfake detection — 5 Indian languages', github: 'https://github.com/ErDashrath/Multilingual_ai_voice_detection', live: null },
     { name: 'Vani AI', desc: 'Talking face with lip-sync generation', github: 'https://github.com/ErDashrath/vani', live: null },
@@ -63,6 +64,7 @@ const byTech: Record<string, Project[]> = {
     { name: 'EchoAI-Avatar', desc: 'Three.js + Web Speech API + SSE', github: 'https://github.com/ErDashrath/vani_avatar', live: null },
   ],
   'Django / FastAPI': [
+    { name: 'TeleBot CPaaS Caller', desc: 'FastAPI + WebSockets AI voice calling with Twilio/Telnyx', github: null, live: null },
     { name: 'SatyaSwara', desc: 'FastAPI production API', github: 'https://github.com/ErDashrath/SatyaSwara', live: null },
     { name: 'PragatiPath', desc: 'Django 5 + Django Ninja', github: 'https://github.com/ErDashrath/PragatiPath', live: null },
     { name: 'Health Buddy', desc: 'FastAPI REST + ChromaDB', github: 'https://github.com/ErDashrath/Healthbuddy', live: 'https://healthbuddy-kappa.vercel.app/' },
@@ -175,15 +177,17 @@ export default function AllProjects() {
                           <ExternalIcon />
                         </a>
                       )}
-                      <a
-                        href={p.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-zinc-600 hover:text-accent transition-colors"
-                        aria-label={`GitHub — ${p.name}`}
-                      >
-                        <GhIcon />
-                      </a>
+                      {p.github && (
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-zinc-600 hover:text-accent transition-colors"
+                          aria-label={`GitHub — ${p.name}`}
+                        >
+                          <GhIcon />
+                        </a>
+                      )}
                     </div>
                   </div>
                 ))}

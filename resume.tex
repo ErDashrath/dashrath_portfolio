@@ -1,0 +1,129 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- PACKAGES ----------
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry} % Narrow margins for 1-page fit
+\usepackage{mathptmx} % Professional Times New Roman equivalent
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+% ---------- SETTINGS ----------
+\pagestyle{empty} % No page numbers
+\setlength{\parindent}{0pt}
+\definecolor{linkblue}{RGB}{0, 51, 153} % Darker blue for ATS readability
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+    pdftitle={Dashrath Parekar Resume},
+}
+
+% Compact Section Formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% ---------- CUSTOM COMMANDS ----------
+\newcommand{\entry}[4]{
+  \textbf{#1} \hfill \textbf{#2} \\
+  \textit{#3} \hfill \textit{#4}
+}
+
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+    {\Huge \textbf{DASHRATH PAREKAR}} \\ \vspace{2pt}
+    \small
+    \href{mailto:er.dashrath.dev@gmail.com}{er.dashrath.dev@gmail.com} \ | \ 
+    \href{tel:+917058782520}{+91 7058782520} \ | \ 
+    \href{https://dashrath-portfolio.vercel.app/}{Portfolio} \ | \ 
+    \href{https://www.linkedin.com/in/dashrath-parekar-7863a1266/}{LinkedIn} \ | \ 
+    \href{https://github.com/ErDashrath}{GitHub}
+\end{center}
+
+\vspace{-12pt}
+
+% ---------- SUMMARY ----------
+\section{Summary}
+Entry-level \textbf{Data Analyst} (B.E. Computer Engineering, 2026) with hands-on experience building data-driven systems and evaluation pipelines; interested in \textbf{FinTech}, \textbf{fraud/scam analytics}, and \textbf{customer personalization} using \textbf{Python} and \textbf{SQL}.
+
+% ---------- EDUCATION ----------
+\section{Education}
+\textbf{B.E. in Computer Engineering} \hfill \textbf{Expected 2026}\\
+Terna Engineering College, Navi Mumbai \hfill CGPA: 8.13/10
+
+	extbf{Higher Secondary Certificate (HSC)} \hfill \textbf{2021}\\
+Rajashri Shahu College, Latur \hfill 91.5\%
+
+% ---------- TECHNICAL SKILLS (JD KEYWORD OPTIMIZED) ----------
+\section{Technical Skills}
+{\small
+\begin{tabular}{ @{} l @{\hspace{2ex}} l }
+	extbf{Analytics:} & \textbf{Python}, \textbf{SQL}, \textbf{PostgreSQL}, NumPy, EDA, Metrics \& Dashboards \\
+	extbf{Statistics/ML (Basics):} & Descriptive stats, hypothesis testing, classification/regression fundamentals \\
+	extbf{Tools:} & \textbf{Excel}, Git/GitHub, Linux, Jupyter, REST APIs \\
+	extbf{Development:} & React, Next.js, FastAPI, Django, Docker \\
+	extbf{Visualization:} & Recharts (React), reporting-ready charts \& tables
+\end{tabular}
+}
+
+% ---------- EXPERIENCE ----------
+\section{Experience}
+\entry{AI Engineer Intern}{Jul 2025 -- Present}{HealthFirst Priority}{Remote}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{AI Voice-Calling Platform (CPaaS):} Built an end-to-end telebot system using \textbf{FastAPI + WebSockets}, \textbf{Whisper STT}, LLM-driven dialogue, and \textbf{TTS}; integrated \textbf{Twilio/Telnyx} for telephony, media streaming, barge-in handling, and live call controls.
+    \item \textbf{AWS Deployment:} Deployed GPU-backed services on \textbf{EC2}, added monitoring/logging, and optimized latency/concurrency for production-like traffic.
+    \item \textbf{Conversation Analytics:} Implemented conversation memory, slot-based onboarding flows, fallback/error handling, and post-call transcript analytics for reliable automated onboarding calls.
+\end{itemize}
+
+% ---------- PROJECTS (TAILORED FOR DATA ANALYST JD) ----------
+\section{Projects}
+
+% 1. SATYASWARA
+	extbf{SatyaSwara  – AI Voice Scam Detection (Fraud Analytics)} \hfill \textit{Python, FastAPI, PyTorch, Wav2Vec2, librosa}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Model Training:} Fine-tuned a \textbf{Wav2Vec2}-based model on a custom dataset of \textbf{Indian voice samples} to improve robustness across accents.
+    \item \textbf{Low-Latency Detection:} Served real-time predictions via FastAPI with \textbf{<200ms} response time using safe audio truncation and global model loading.
+    \item \textbf{Scoring \& Decisioning:} Added \textbf{dynamic confidence scoring} to support risk-aware decisions (flag / review / allow) for fraud-prevention workflows.
+\end{itemize}
+\vspace{2pt}
+
+% 2. PRAGATIPATH
+	extbf{PragatiPath – Adaptive Learning Platform (Personalization)} \hfill \textit{Django, React, PostgreSQL, NumPy}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Behavioral Modeling:} Implemented \textbf{Bayesian Knowledge Tracing} to model learner mastery and personalize next-question difficulty from performance signals.
+    \item \textbf{Dashboards:} Built performance visualizations with \textbf{React + Recharts} to track progress, correctness trends, and learning curves.
+\end{itemize}
+\vspace{2pt}
+
+% 3. ECHOLEARN
+	extbf{EchoLearn – Privacy-First Mental Health AI (Local Analytics)} \hfill \textit{React, TypeScript, WebLLM, WebGPU}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Assessment Data:} Implemented a \textbf{DASS-21} clinical assessment flow and stored user progress locally with strong encryption (AES-GCM).
+    \item \textbf{Product Metrics Mindset:} Designed the app around measurable user flows (assessment completion, engagement, and progress signals) to support iteration.
+\end{itemize}
+
+% ---------- CERTIFICATIONS ----------
+\section{Certifications}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Oracle:} Data Science Professional | AI Foundations Associate | Generative AI Professional
+\end{itemize}
+
+% ---------- ACHIEVEMENTS ----------
+\section{Achievements}
+{\small
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{National Finalist:} India AI Buildathon (10,000+ teams) -- Showcased at Bharat Mandapam, New Delhi.
+    \item \textbf{National Finalist (Top 5):} ThinkPlus National Hackathon 2025 -- Team StrawHats.
+    \item \textbf{Special Mention:} Operation Trinetra Hackathon, Anna University (Top tier out of 170+ teams).
+    \item \textbf{Finalist (Top 7):} Enigma Hackathon, SIES College of Engineering (200+ teams).
+    \item \textbf{NSS Volunteer:} 2023--2025; organized social welfare drives.
+\end{itemize}
+}
+
+\end{document}
